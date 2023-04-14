@@ -204,17 +204,17 @@ class Game(object):
 
         return is_over
 
-#
-#
-# if __name__ == '__main__':
-#     from Human_player import HumanPlayer
-#     from Random_player import RandomPlayer
-#     from AIPlayer import AIPlayer
-#
-#     # x = HumanPlayer("X")
-#     x = RandomPlayer("X")
-#     o = RandomPlayer("O")
-# #     # x = AIPlayer("X")
-# #     o = AIPlayer("O")
-#     game = Game(x, o)
-#     game.run()
+
+
+if __name__ == '__main__':
+    from Human_player import HumanPlayer
+    from Random_player import RandomPlayer
+    from AIPlayer import AIPlayer
+
+    # x = HumanPlayer("X")
+    x = AIPlayer("X")
+    o = RandomPlayer("O")
+#     # x = AIPlayer("X")
+#     o = AIPlayer("O")
+    game = Game(x, o)
+    game.run()

@@ -1,3 +1,5 @@
+import MCTS
+
 class AIPlayer:
     """
     AI 玩家
@@ -24,8 +26,11 @@ class AIPlayer:
         print("请等一会，对方 {}-{} 正在思考中...".format(player_name, self.color))
 
         # -----------------请实现你的算法代码--------------------------------------
-
-        action = None
+        action_list = list(board.get_legal_actions(self.color))
+        if len(action_list) == 0:
+            action = None
+        else:
+            action = MCTS.MCTSearch(board, self.color).search()
         # ------------------------------------------------------------------------
 
         return action
